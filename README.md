@@ -10,13 +10,13 @@
 
 ## 使用方法
 ```bash
-# 安装依赖
+# 1. 安装依赖
 npm install
 
-# 撸leetcode
+# 2. 撸leetcode
 
-# 执行 - 在当前解题文件或测试文件中按 F5以执行
+# 3. 执行 - 在当前解题文件或测试文件中按 F5以执行
 # 或者
-npm run jest 01-question-one
+npm run jest 文件名(如01-question-one)
 
 ```
