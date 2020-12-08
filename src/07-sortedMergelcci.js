@@ -7,6 +7,7 @@
  * @return {void} Do not return anything, modify A in-place instead.
  */
 function merge(A, m, B, n) {
+  // * 解法1
   A.splice(m, A.length - m)
   let countB = 0
   for (let i = 0; i < A.length; i++) {
@@ -21,6 +22,14 @@ function merge(A, m, B, n) {
     A.splice(A.length, 0, ...B.slice(countB))
   }
   return A
+  // * 解法2
+  // let i = 0
+  // while (n) {
+  //   A[m++] = B[i++]
+  //   n--
+  // }
+  // A.sort((a, b) => a - b)
+  // return A
 }
 
 module.exports = merge
