@@ -30,6 +30,9 @@ function merge(A, m, B, n) {
   // }
   // A.sort((a, b) => a - b)
   // return A
+  // * 解法3
+  // A.splice(m, n, ...B)
+  // return A.sort((a, b) => a - b)
 }
 
 module.exports = merge
