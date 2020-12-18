@@ -17,13 +17,20 @@ function maxProfit(prices) {
   // }
   // return profit
   // * 解法2
-  let profit = 0
-  for (let i = 0, len = prices.length - 1; i < len; i++) {
-    if (prices[i + 1] > prices[i]) {
-      profit += prices[i + 1] - prices[i]
-    }
+  // let profit = 0
+  // for (let i = 0, len = prices.length - 1; i < len; i++) {
+  //   if (prices[i + 1] > prices[i]) {
+  //     profit += prices[i + 1] - prices[i]
+  //   }
+  // }
+  // return profit
+  // * 解法3
+  const length = prices.length
+  let [empty, hold] = [0, -prices[0]]
+  for (let i = 1; i < length; i++) {
+    ;[empty, hold] = [Math.max(empty, hold + prices[i]), Math.max(hold, empty - prices[i])]
   }
-  return profit
+  return empty
 }
 
 module.exports = maxProfit
