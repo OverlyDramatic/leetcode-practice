@@ -13,12 +13,11 @@ var isIsomorphic = function (s, t) {
     const value1 = t[i]
     const key2 = t[i]
     const value2 = s[i]
-    if (!pattern1[key1] && !pattern2[key2]) {
-      pattern1[key1] = value1
-      pattern2[key2] = value2
-    } else if (pattern1[key1] !== value1 && pattern2[key2] !== value2 ) {
+    if ((pattern1[key1] && pattern1[key1] !== value1)|| (pattern2[key2] && pattern2[key2] !== value2)) {
       return false
     }
+    pattern1[key1] = value1
+    pattern2[key2] = value2
   }
   return true
 }
