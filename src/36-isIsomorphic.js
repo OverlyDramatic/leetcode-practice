@@ -9,15 +9,13 @@ var isIsomorphic = function (s, t) {
   const pattern1 = {}
   const pattern2 = {}
   for (let i in s) {
-    const key1 = s[i]
-    const value1 = t[i]
-    const key2 = t[i]
-    const value2 = s[i]
-    if ((pattern1[key1] && pattern1[key1] !== value1)|| (pattern2[key2] && pattern2[key2] !== value2)) {
+    const x = s[i]
+    const y = t[i]
+    if ((pattern1[x] && pattern1[x] !== y)|| (pattern2[y] && pattern2[y] !== x)) {
       return false
     }
-    pattern1[key1] = value1
-    pattern2[key2] = value2
+    pattern1[x] = y
+    pattern2[y] = x
   }
   return true
 }
