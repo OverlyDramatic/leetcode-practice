@@ -10,6 +10,9 @@ var rotate = function (nums, k) {
     nums.unshift(nums.pop())
   }
   return nums
+  // * 2 concat
+  // const index = nums.length - k
+  // return nums = new Array(...nums.slice(index)).concat(nums.slice(0, index))
 }
 
 module.exports = rotate
