@@ -6,9 +6,11 @@
  * @return {number}
  */
 var findTheWinner = function (n, k) {
-  const friends = new Array(n).fill(0)
-  for (const i in friends) {
-    friends[i] = +i + 1
+  // const friends = new Array(n).fill(0)
+  // for (const i in friends) {
+  const friends = []
+  for (let i = 1; i <= n; i++) {
+    friends.push(i)
   }
 
   let index = 0
