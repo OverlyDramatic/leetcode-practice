@@ -9,11 +9,11 @@ var lengthOfLongestSubstring = function (s) {
   const charSet = new Set()
   const length = s.length
   while (right < length) {
-    const char = s.substring(right, right + 1)
+    const char = s.charAt(right)
     if (charSet.has(char)) {
       let _char = ''
       do {
-        _char = s.substring(left, left + 1)
+        _char = s.charAt(left)
         left++
         charSet.delete(_char)
       } while (_char !== char)

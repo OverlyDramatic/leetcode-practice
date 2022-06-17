@@ -16,7 +16,7 @@ var firstUniqChar = function (s) {
   const { length } = s
   let i = 0
   while (i < length) {
-    if (charCount[s.substring(i, ++i)] === 1) {
+    if (charCount[s.charAt(i++)] === 1) {
       return i - 1
     }
   }
